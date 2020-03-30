@@ -1,0 +1,225 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<ResourceDictionary
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    x:Class="Cognizant.UI.Components.Resource.Style"
+    xmlns:ff="clr-namespace:FFImageLoading.Svg.Forms;assembly=FFImageLoading.Svg.Forms">
+
+    <x:Double
+        x:Key="HeaderHeigthAndroid">56</x:Double>
+    <x:Double
+        x:Key="HeaderHeigthIos">56</x:Double>
+
+    <x:Double
+        x:Key="HeaderHeigthModalViewAndroid">83</x:Double>
+    <x:Double
+        x:Key="HeaderHeigthModalViewIos">83</x:Double>
+    
+    <Style
+        TargetType="StackLayout"
+        x:Key="MainStackLayout">
+        <Setter
+            Property="Margin">
+            <OnPlatform
+                x:TypeArguments="Thickness">
+                <On
+                    Platform="iOS"
+                    Value="0,40,0,0" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <Style
+        TargetType="Grid"
+        x:Key="MainGrid">
+        <Setter
+            Property="Margin">
+            <OnPlatform
+                x:TypeArguments="Thickness">
+                <On
+                    Platform="iOS"
+                    Value="0,40,0,0" />
+            </OnPlatform>
+        </Setter>
+    </Style>
+
+    <OnPlatform
+        x:TypeArguments="GridLength"
+        x:Key="HeaderHeight">
+        <On
+            Platform="iOS"
+            Value="{StaticResource HeaderHeigthIos}" />
+        <On
+            Platform="Android"
+            Value="{StaticResource HeaderHeigthAndroid}" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="GridLength"
+        x:Key="HeaderHeightModalView">
+        <On
+            Platform="iOS"
+            Value="{StaticResource HeaderHeigthModalViewIos}" />
+        <On
+            Platform="Android"
+            Value="{StaticResource HeaderHeigthModalViewAndroid}" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="x:String"
+        x:Key="PreciousSansTwoMedium">
+        <On
+            Platform="iOS"
+            Value="PreciousSansTwo-Medium" />
+        <On
+            Platform="Android"
+            Value="Precious-Sans-Two-Medium.otf#☞" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="x:String"
+        x:Key="PreciousSansTwoBold">
+        <On
+            Platform="iOS"
+            Value="PreciousSansTwo-Bold" />
+        <On
+            Platform="Android"
+            Value="Precious-Sans-Two-Bold.otf#☞" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="x:String"
+        x:Key="InterstateRegular">
+        <On
+            Platform="iOS"
+            Value="Interstate-Regular" />
+        <On
+            Platform="Android"
+            Value="Interstate-Regular.ttf#Interstate-Regular" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="x:String"
+        x:Key="InterstateLight">
+        <On
+            Platform="iOS"
+            Value="Interstate-Light" />
+        <On
+            Platform="Android"
+            Value="Interstate-Light.ttf#Interstate-Light" />
+    </OnPlatform>
+
+    <OnPlatform
+        x:TypeArguments="x:String"
+        x:Key="InterstateBold">
+        <On
+            Platform="iOS"
+            Value="Interstate-Bold" />
+        <On
+            Platform="Android"
+            Value="Interstate-Bold.ttf#Interstate-Bold" />
+    </OnPlatform>
+
+    <!-- COLORS-->
+    <Color
+        x:Key="AppColor">#ffffff</Color>
+
+    <Color
+        x:Key="AppColorGrey">#f1f1f1</Color>
+
+    <Color
+        x:Key="AppColorDisabledGrey">#bdbfbf</Color>
+
+    <Color
+        x:Key="BlueColor">#0094d9</Color>
+
+    <Color
+        x:Key="BlueLightColor">#98cfef</Color>
+
+    <Color
+        x:Key="OrangeColor">#eb7d16</Color>
+
+    <Color
+        x:Key="WhiteColor">#ffffff</Color>
+
+    <Color
+        x:Key="RedColor">#ed1c24</Color>
+
+    <Color
+        x:Key="RedLightColor">#f49ac1</Color>
+
+    <Color
+        x:Key="RedLineColor">#f69679</Color>
+
+    <Color
+        x:Key="YellowLineColor">#fdc689</Color>
+
+    <Color
+        x:Key="BlueLineColor">#98cfef</Color>
+
+    <Color
+        x:Key="GreenLineColor">#badeb4</Color>
+
+    <Color
+        x:Key="RedTitleColor">#ed1c24</Color>
+
+    <Color
+        x:Key="YellowTitleColor">#f7931e</Color>
+
+    <Color
+        x:Key="BlueTitleColor">#0094d9</Color>
+
+    <Color
+        x:Key="GreenTitleColor">#39b54a</Color>
+
+    <Color
+        x:Key="GreyLineColor">#d6d6d7</Color>
+
+    <Color
+        x:Key="GreyLine50Color">#80d6d6d7</Color>
+
+    <Color
+        x:Key="DarkGreyColor">#525558</Color>
+
+    <Color
+        x:Key="DarkGrey50Color">#80525558</Color>
+
+    <Color
+        x:Key="DarkGrey35Color">#59525558</Color>
+
+    <Color
+        x:Key="DarkGrey8Color">#14525558</Color>
+
+    <Color
+        x:Key="GreyColor">#8a8d8e</Color>
+
+    <Color
+        x:Key="DarkGreenColor">#39b54a</Color>
+
+    <Color
+        x:Key="DarkGreenOpacity50Color">#8039b54a</Color>
+
+    <Color
+        x:Key="LightGreenColor">#6dc472</Color>
+
+    <Color
+        x:Key="BlueDarkColor">#004c8a</Color>
+
+    <Color
+        x:Key="GreyTextColor">#8e9091</Color>
+
+    <Color
+        x:Key="GreyProgressBar">#E9E9E9</Color>
+
+    <Color
+        x:Key="MessageRedLightColor">#fcddd3</Color>
+
+    <Color
+        x:Key="MessageYellowLightColor">#fef4e8</Color>
+
+    <Color
+        x:Key="MessageBlueLightColor">#dceff9</Color>
+
+    <Color
+        x:Key="MessageGreenLightColor">#e8f4e6</Color>
+</ResourceDictionary>

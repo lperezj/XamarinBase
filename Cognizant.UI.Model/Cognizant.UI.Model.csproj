@@ -1,0 +1,20 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MvvmCross" Version="6.4.1" />
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Enums\" />
+    <Folder Include="ReturnPageTypes\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="UserCompanySelector.cs" />
+    <Compile Remove="ReturnPageTypes\GrazingDayUpdated.cs" />
+    <Compile Remove="Time.cs" />
+  </ItemGroup>
+</Project>

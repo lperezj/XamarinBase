@@ -1,0 +1,22 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="Class1.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Common\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cognizant.AppServices.Contracts\Cognizant.AppServices.Contracts.csproj" />
+    <ProjectReference Include="..\Cognizant.DataService.Contracts\Cognizant.DataService.Contracts.csproj" />
+    <ProjectReference Include="..\Cognizant.DataService.Entities\Cognizant.DataService.Entities.csproj" />
+    <ProjectReference Include="..\Cognizant.Common\Cognizant.Common.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.Net.Http" Version="4.3.4" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,60 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mvx:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:Class="Cognizant.Core.Views.HomePage"
+    x:Name="this">
+
+    <mvx:MvxContentPage.Resources>
+        
+    </mvx:MvxContentPage.Resources>
+
+    <StackLayout Style="{StaticResource MainStackLayout}">
+
+        <!-- HEADER -->
+        <Grid>
+            <Grid.RowDefinitions>
+                <RowDefinition
+                    Height="{StaticResource HeaderHeight}" />
+                <RowDefinition
+                    Height="1" />
+            </Grid.RowDefinitions>
+
+            <Grid
+                Margin="16,0,16,0">
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition
+                        Width="*" />
+                    <ColumnDefinition
+                        Width="*" />
+                </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="HOME"
+                    HorizontalTextAlignment="Start"
+                    VerticalTextAlignment="Center" />
+                <Label
+                    VerticalTextAlignment="Center"
+                    Grid.Column="1"
+                    HorizontalTextAlignment="End">
+                    <Label.FormattedText>
+                        <FormattedString>
+                            <Span
+                                Text="Cognizant" />
+                            <Span
+                                Text=" " />
+                            <Span/>
+                        </FormattedString>
+                    </Label.FormattedText>
+                </Label>
+            </Grid>
+
+            <BoxView
+                Grid.Row="1"
+                HeightRequest="1"
+                Color="{StaticResource GreyLineColor}"
+                HorizontalOptions="FillAndExpand" />
+        </Grid>
+    </StackLayout>
+</mvx:MvxContentPage>

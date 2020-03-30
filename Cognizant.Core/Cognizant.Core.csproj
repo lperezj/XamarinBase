@@ -1,0 +1,46 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <ProduceReferenceAssembly>true</ProduceReferenceAssembly>
+  </PropertyGroup>
+
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <DebugType>portable</DebugType>
+    <DebugSymbols>true</DebugSymbols>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="MvvmCross" Version="6.4.1" />
+    <PackageReference Include="MvvmCross.Forms" Version="6.4.1" />
+    <PackageReference Include="Xamarin.Forms.Skeleton" Version="1.0.0" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms" Version="2.4.11.982" />
+    <PackageReference Include="Xamarin.FFImageLoading.Svg" Version="2.4.11.982" />
+    <PackageReference Include="MvvmCross.Plugin.WebBrowser" Version="6.4.0" />
+    <PackageReference Include="Microsoft.Extensions.Configuration.Json" Version="3.1.1" />
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="ViewModels\" />
+    <Folder Include="ViewModels\Base\" />
+    <Folder Include="Views\Base\" />
+    <Folder Include="Converters\" />
+    <Folder Include="Converters\General\" />
+    <Folder Include="DataTemplates\" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="TabbedPage.xaml.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Cognizant.AppServices.Contracts\Cognizant.AppServices.Contracts.csproj" />
+    <ProjectReference Include="..\Cognizant.AppServices.Implementations\Cognizant.AppServices.Implementations.csproj" />
+    <ProjectReference Include="..\Cognizant.Common\Cognizant.Common.csproj" />
+    <ProjectReference Include="..\Cognizant.DataService.Contracts\Cognizant.DataService.Contracts.csproj" />
+    <ProjectReference Include="..\Cognizant.DataService.Entities\Cognizant.DataService.Entities.csproj" />
+    <ProjectReference Include="..\Cognizant.DataService.Implementations\Cognizant.DataService.Implementations.csproj" />
+    <ProjectReference Include="..\Cognizant.i18n\Cognizant.i18n.csproj" />
+    <ProjectReference Include="..\Cognizant.UI.Components\Cognizant.UI.Components.csproj" />
+    <ProjectReference Include="..\Cognizant.UI.Model\Cognizant.UI.Model.csproj" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,188 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
+    <ProductVersion>8.0.30703</ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{30F17809-4F8A-408B-B236-7338EC8D7456}</ProjectGuid>
+    <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
+    <TemplateGuid>{6143fdea-f3c2-4a09-aafa-6e230626515e}</TemplateGuid>
+    <OutputType>Exe</OutputType>
+    <RootNamespace>Cognizant.iOS</RootNamespace>
+    <IPhoneResourcePrefix>Resources</IPhoneResourcePrefix>
+    <AssemblyName>FC.Weidekalender.iOS</AssemblyName>
+    <MtouchEnableSGenConc>true</MtouchEnableSGenConc>
+    <MtouchHttpClientHandler>NSUrlSessionHandler</MtouchHttpClientHandler>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhoneSimulator' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>x86_64</MtouchArch>
+    <MtouchLink>None</MtouchLink>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>VS: WildCard Development</CodesignProvision>
+<MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+<AssemblyName>Cognizant.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhoneSimulator' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhoneSimulator\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchLink>None</MtouchLink>
+    <MtouchArch>x86_64</MtouchArch>
+    <CodesignProvision>Automatic:AppStore</CodesignProvision>
+    <CodesignKey>iPhone Distribution</CodesignKey>
+    <NoStdLib>false</NoStdLib>
+    <AssemblyName>Cognizant.iOS</AssemblyName>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|iPhone' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\iPhone\Debug</OutputPath>
+    <DefineConstants>DEBUG</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Developer</CodesignKey>
+    <MtouchDebug>true</MtouchDebug>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <MtouchLink>None</MtouchLink>
+    <MtouchHttpClientHandler>HttpClientHandler</MtouchHttpClientHandler>
+    <MtouchI18n></MtouchI18n>
+    <CrashReportingDelay>-1</CrashReportingDelay>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
+    <DebugType>none</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\iPhone\Release</OutputPath>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+    <MtouchArch>ARM64</MtouchArch>
+    <CodesignKey>iPhone Distribution: FrieslandCampina Nederland BV (QZPTSL5224)</CodesignKey>
+    <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="Main.cs" />
+    <Compile Include="AppDelegate.cs" />
+    <None Include="Entitlements.plist" />
+    <None Include="Info.plist" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Renderers\NativeViewCellRenderer.cs" />
+    <Compile Include="Renderers\TabbedPageRenderer.cs" />
+    <Compile Include="Effect\RoundCornersEffectIOS.cs" />
+    <Compile Include="FirebaseAnalyticsService.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <InterfaceDefinition Include="Resources\LaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\Contents.json">
+      <Visible>false</Visible>
+    </ImageAsset>
+    <InterfaceDefinition Include="FCLaunchScreen.storyboard" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\cognizant.png" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\cognizant-1.png" />
+    <ImageAsset Include="Assets.xcassets\Splash.imageset\cognizant-2.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant180.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant120.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant120-1.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizan80.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant87.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant58.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant60.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant.png" />
+    <ImageAsset Include="Assets.xcassets\AppIcon.appiconset\cognizant-1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Reference Include="System" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Core" />
+    <Reference Include="Xamarin.iOS" />
+    <Reference Include="System.Numerics" />
+    <Reference Include="System.Numerics.Vectors" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="Xamarin.Forms" Version="4.5.0.356" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.3.1" />
+    <PackageReference Include="MvvmCross">
+      <Version>6.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="MvvmCross.Forms">
+      <Version>6.4.1</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg.Forms">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.FFImageLoading.Svg">
+      <Version>2.4.11.982</Version>
+    </PackageReference>
+    <PackageReference Include="Acr.UserDialogs">
+      <Version>7.0.35</Version>
+    </PackageReference>
+    <PackageReference Include="Xamarin.Firebase.iOS.Analytics">
+      <Version>6.0.4.1</Version>
+    </PackageReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
+  <ItemGroup>
+    <ProjectReference Include="..\Cognizant.Core\Cognizant.Core.csproj">
+      <Project>{E3DAC4E8-9B96-45FA-8348-46FC7DC9A89E}</Project>
+      <Name>Cognizant.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cognizant.AppServices.Contracts\Cognizant.AppServices.Contracts.csproj">
+      <Project>{E584225F-F7B9-4BB6-B2B9-71EBEB2D3959}</Project>
+      <Name>Cognizant.AppServices.Contracts</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Cognizant.UI.Components\Cognizant.UI.Components.csproj">
+      <Project>{25A0D72F-8BB6-47E7-892C-A7A75E9073CF}</Project>
+      <Name>Cognizant.UI.Components</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Folder Include="Assets.xcassets\Splash.imageset\" />
+    <Folder Include="Assets.xcassets\Logo.imageset\" />
+    <Folder Include="Assets.xcassets\Logo.imageset\" />
+  </ItemGroup>
+  <ItemGroup>
+    <BundleResource Include="Resources\iconvisibilityoff.png" />
+    <BundleResource Include="Resources\iconvisibilityon.png" />
+    <BundleResource Include="Resources\Interstate-Light.ttf" />
+    <BundleResource Include="Resources\Interstate-Regular.ttf" />
+    <BundleResource Include="Resources\Interstate-Bold.ttf" />
+    <BundleResource Include="Resources\Precious-Sans-Two-Medium.otf" />
+    <BundleResource Include="Resources\Precious-Sans-Two-Bold.otf" />
+    <BundleResource Include="Resources\calendar.png" />
+    <BundleResource Include="Resources\home.png" />
+    <BundleResource Include="Resources\off%401x.png" />
+    <BundleResource Include="Resources\off%402x.png" />
+    <BundleResource Include="Resources\off%403x.png" />
+    <BundleResource Include="Resources\on%401x.png" />
+    <BundleResource Include="Resources\on%402x.png" />
+    <BundleResource Include="Resources\on%403x.png" />
+    <BundleResource Include="Resources\calendar%402x.png" />
+    <BundleResource Include="Resources\calendar%403x.png" />
+    <BundleResource Include="Resources\home%402x.png" />
+    <BundleResource Include="Resources\home%403x.png" />
+    <BundleResource Include="Resources\profile.png" />
+    <BundleResource Include="Resources\profile%402x.png" />
+    <BundleResource Include="Resources\profile%403x.png" />
+    <BundleResource Include="Resources\radiocheckedbg%403x.png" />
+    <BundleResource Include="Resources\radiocheckedbg%402x.png" />
+    <BundleResource Include="Resources\radiocheckedbg.png" />
+    <BundleResource Include="Resources\radioborder%403x.png" />
+    <BundleResource Include="Resources\radioborder%402x.png" />
+    <BundleResource Include="Resources\radioborder.png" />
+  </ItemGroup>
+</Project>

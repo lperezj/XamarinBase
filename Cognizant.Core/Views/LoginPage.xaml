@@ -1,0 +1,108 @@
+﻿<?xml version="1.0" encoding="UTF-8"?>
+<mvx:MvxContentPage
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:mvx="clr-namespace:MvvmCross.Forms.Views;assembly=MvvmCross.Forms"
+    x:Class="Cognizant.Core.Views.LoginPage"
+    BackgroundColor="{StaticResource AppColor}">
+
+    <StackLayout>
+
+        <ScrollView
+            VerticalOptions="FillAndExpand">
+            <Grid
+                RowSpacing="40">
+
+                <Grid.RowDefinitions>
+                    <RowDefinition
+                        Height="Auto" />
+                    <RowDefinition
+                        Height="*" />
+                    <RowDefinition
+                        Height="Auto" />
+                </Grid.RowDefinitions>
+
+                <StackLayout
+                    Grid.Row="0"
+                    Margin="15,30">
+
+                    <!-- TITLE -->
+                    <Label
+                        Margin="0,22,15,0"
+                        Text="Login"/>
+
+                    <!-- USERNAME -->
+                    <Entry
+                        Placeholder="User"
+                        Margin="0,24,0,30"
+                        Text="User" />
+
+                    <!-- PASSWORD -->
+                    <Grid>
+                        <Grid.RowDefinitions>
+                            <RowDefinition
+                                Height="Auto" />
+                        </Grid.RowDefinitions>
+                        <Grid.ColumnDefinitions>
+                            <ColumnDefinition
+                                Width="90*" />
+                            <ColumnDefinition
+                                Width="10*" />
+                        </Grid.ColumnDefinitions>
+
+                        <Entry
+                            Grid.Row="0"
+                            Grid.Column="0"
+                            Grid.ColumnSpan="2"
+                            x:Name="passwordEntry"
+                            IsPassword="True"
+                            Placeholder="Password"
+                            Text="Password"
+                            HorizontalOptions="FillAndExpand">
+                        </Entry>
+
+                        <!--<Image
+                            Grid.Row="0"
+                            Grid.Column="1"
+                            Margin="6"
+                            Style="{StaticResource EyeOpenedButton}"
+                            HeightRequest="{Binding Source={x:Reference passwordEntry}, Path=HeightRequest}">
+                            <Image.GestureRecognizers>
+                                <TapGestureRecognizer
+                                    Tapped="OnEyeButtonPressed"
+                                    NumberOfTapsRequired="1" />
+                            </Image.GestureRecognizers>
+                            <Image.Triggers>
+                                <DataTrigger
+                                    TargetType="Image"
+                                    Binding="{Binding Source={x:Reference passwordEntry}, Path=IsPassword}"
+                                    Value="True">
+                                    <Setter
+                                        Property="Style"
+                                        Value="{StaticResource EyeOpenedButton}" />
+                                </DataTrigger>
+                                <DataTrigger
+                                    TargetType="Image"
+                                    Binding="{Binding Source={x:Reference passwordEntry}, Path=IsPassword}"
+                                    Value="False">
+                                    <Setter
+                                        Property="Style"
+                                        Value="{StaticResource EyeClosedButton}" />
+                                </DataTrigger>
+                            </Image.Triggers>
+                        </Image>-->
+                    </Grid>
+                    
+                    <Button
+                        Text="Log in"
+                        Margin="0,58,0,0"
+                        BackgroundColor="CornflowerBlue"
+                        TextColor="White"
+                        Command="{Binding LoginCommand}">
+                    </Button>
+                </StackLayout>
+            </Grid>
+        </ScrollView>
+    </StackLayout>
+
+</mvx:MvxContentPage>

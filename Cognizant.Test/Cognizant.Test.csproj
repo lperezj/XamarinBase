@@ -1,0 +1,33 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netcoreapp2.0</TargetFramework>
+
+    <IsPackable>false</IsPackable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Microsoft.NET.Test.Sdk" Version="15.3.0-preview-20170628-02" />
+    <PackageReference Include="xunit" Version="2.4.1" />
+    <PackageReference Include="xunit.runner.visualstudio" Version="2.2.0" />
+    <PackageReference Include="Moq" Version="4.13.1" />
+    <PackageReference Include="Xamarin.Essentials" Version="1.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="Mapper\" />
+    <Folder Include="ViewModel\Base\" />
+    <Folder Include="Converters\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Remove="FC.Weidekalender.DataService.Test\obj\FC.Weidekalender.DataService.Test.csproj.nuget.dgspec.json" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\FC.Weidekalender.UI.Model\FC.Weidekalender.UI.Model.csproj" />
+    <ProjectReference Include="..\FC.Weidekalender.Core\FC.Weidekalender.Core.csproj" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Remove="ViewModel\Base\BaseViewModelTests.cs" />
+    <Compile Remove="ViewModel\Base\ViewModelBasicParametersTests.cs" />
+  </ItemGroup>
+</Project>

@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleShortVersionString</key>
+	<string>1.0</string>
+	<key>CFBundleIdentifier</key>
+	<string>cognizant.dev</string>
+	<key>UIUserInterfaceStyle</key>
+	<string>Light</string>
+	<key></key>
+	<string></string>
+	<key>CFBundleVersion</key>
+	<string>1.0</string>
+	<key>UILaunchStoryboardName</key>
+	<string>FCLaunchScreen</string>
+	<key>UIAppFonts</key>
+	<array>
+		<string>Interstate-Light.ttf</string>
+		<string>Interstate-Regular.ttf</string>
+		<string>Interstate-Bold.ttf</string>
+		<string>Precious-Sans-Two-Medium.otf</string>
+		<string>Precious-Sans-Two-Bold.otf</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+	</array>
+	<key>CFBundleDisplayName</key>
+	<string>Cognizant</string>
+	<key>MinimumOSVersion</key>
+	<string>11.0</string>
+	<key>UIDeviceFamily</key>
+	<array>
+		<integer>1</integer>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+		<string>UIInterfaceOrientationPortraitUpsideDown</string>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+	</array>
+	<key>CFBundleName</key>
+	<string>Cognizant</string>
+	<key>XSAppIconAssets</key>
+	<string>Assets.xcassets/AppIcon.appiconset</string>
+</dict>
+</plist>

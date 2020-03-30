@@ -1,0 +1,26 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Application
+    xmlns="http://xamarin.com/schemas/2014/forms"
+    xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+    xmlns:d="http://xamarin.com/schemas/2014/forms/design"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    xmlns:resource="clr-namespace:Cognizant.UI.Components.Resource;assembly=Cognizant.UI.Components"
+    xmlns:converters="clr-namespace:Cognizant.Core.Converters"
+    mc:Ignorable="d"
+    x:Class="Cognizant.Core.App">
+    <Application.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <resource:Style />
+            </ResourceDictionary.MergedDictionaries>
+
+            <!-- DEFAULT CONTROL STYLES-->
+           
+            <converters:InverseBoolConverter
+                x:Key="InverseBool" />
+
+            <converters:SelectedItemEventArgsToSelectedItemConverter
+                x:Key="SelectedItemConverter" />
+        </ResourceDictionary>
+    </Application.Resources>
+</Application>
